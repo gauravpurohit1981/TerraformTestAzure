@@ -6,9 +6,14 @@ pool:
   vmImage: 'vs2017-win2016'
 
 steps:
-- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
-  displayName: 'Use Terraform latest'
+#- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
+# displayName: 'Use Terraform latest'
 
+- task: Bash@3
+  inputs: 
+    targetType: inline
+    script: terraform version; echo "version of the terraform";pwd; ls -l
+          
 - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV1@0
   displayName: 'Terraform : INIT'
   inputs:
