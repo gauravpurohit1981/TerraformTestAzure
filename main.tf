@@ -84,7 +84,7 @@ resource "azurerm_virtual_machine" "sunajwebservervm01" {
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = "sujanwebservervm01"
+    computer_name  = "sunajwebservervm01"
     admin_username = ""
     admin_password = ""
   }
