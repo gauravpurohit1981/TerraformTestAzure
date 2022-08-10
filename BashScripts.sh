@@ -5,8 +5,8 @@ az account set --subscription ""Microsoft Azure Enterprise"
 
 
 #Set Variables for Storage account and Key Vault that support the Terraform implementation
-RESOURCE_GROUP_NAME=sanuj-infra
-STORAGE_ACCOUNT_NAME=sanujtstate
+RESOURCE_GROUP_NAME=sunaj-infra
+STORAGE_ACCOUNT_NAME=sunajtstate
 CONTAINER_NAME=tstate
 STATE_FILE="terraform.state"
 
@@ -29,6 +29,6 @@ echo "access_key: $ACCOUNT_KEY"
 echo "state_file: $STATE_FILE"
 
 # Create KeyVault and example of storing a key
-az keyvault create --name "sanujkv" --resource-group "sanuj-infra" --location uksouth
-az keyvault secret set --vault-name "sanujkv" --name "tstateaccess" --value {$ACCOUNT_KEY}
-az keyvault secret show --vault-name "sanujkv" --name "tstateaccess"
+az keyvault create --name "sunajkv" --resource-group "sanuj-infra" --location uksouth
+az keyvault secret set --vault-name "sunajkv" --name "tstateaccess" --value {$ACCOUNT_KEY}
+az keyvault secret show --vault-name "sunajkv" --name "tstateaccess"
