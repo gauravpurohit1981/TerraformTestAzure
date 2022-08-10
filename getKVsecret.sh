@@ -1,2 +1,2 @@
-az keyvault secret show --vault-name "sanujkv" --name "tstateaccess"
+az keyvault secret show --vault-name "sunajkv" --name "tstateaccess"
 echo "Hello!!!"
