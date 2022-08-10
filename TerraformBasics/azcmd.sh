@@ -6,8 +6,8 @@ az account set -s ""Microsoft Azure Enterprise"
 
 
 
-$env:RESOURCE_GROUP_NAME = 'sanuj-state'
-$env:STORAGE_ACCOUNT_NAME = 'sanujtfstate'
+$env:RESOURCE_GROUP_NAME = 'sunaj-state'
+$env:STORAGE_ACCOUNT_NAME = 'sunajtfstate'
 $env:CONTAINER_NAME = 'tstate'
 # Create resource group
 az group create --name $env:RESOURCE_GROUP_NAME --location uksouth
